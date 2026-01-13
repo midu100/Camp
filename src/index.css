@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+@theme {
+  --color-bd-green: #006a4e;
+  --color-bd-red: #f42a41;
+  --color-bd-gold: #FFD700;
+  --color-bd-dark-green: #004d38;
+}
+
+body {
+    font-family: 'Inter', system-ui, sans-serif;
+    scroll-behavior: smooth;
+    @apply bg-gray-50 text-gray-800;
+}
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fade-in-up 0.8s ease-out forwards;
+}

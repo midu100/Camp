@@ -1,0 +1,74 @@
+import { Phone, Mail, MessageCircle, Facebook } from 'lucide-react';
+import { FaWhatsapp } from 'react-icons/fa';
+
+export default function Advice() {
+  const representatives = [
+    {
+      name: "জনাব আব্দুল মালেক",
+      title: "প্রধান সমন্বয়ক",
+      phone: "০১৭৮৮-৫২৩৪৫৬",
+      actionText: "বাটন বা মেসেজ দিন",
+      icon: <FaWhatsapp size={20} />,
+      btnColor: "text-green-600",
+      borderColor: "border-bd-green"
+    },
+    {
+      name: "ব্যারিস্টার সুমন আহমেদ",
+      title: "আইন বিষয়ক উপদেষ্টা",
+      phone: "০১৮৯৯-৯৮৭৬৫৪",
+      actionText: "lawyer@example.com",
+      icon: <Mail size={20} />,
+      btnColor: "text-gray-700",
+      borderColor: "border-bd-red"
+    },
+    {
+      name: "মোঃ ইব্রাহিম খলিল",
+      title: "যুব প্রতিনিধি",
+      phone: "০১৫৬৬-৫৬৭৮৯০",
+      actionText: "ফেসবুকে নক দিন",
+      icon: <Facebook size={20} />,
+      btnColor: "text-blue-600",
+      borderColor: "border-bd-green"
+    }
+  ];
+
+  return (
+    <section id="advice" className="py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-16 space-y-4">
+           <h2 data-aos="fade-up" data-aos-duration="1500" className="text-3xl md:text-5xl font-bold text-bd-green">অভিযোগ ও পরামর্শ</h2>
+           <div className="w-24 h-1 bg-bd-red mx-auto rounded-full"></div>
+           <p data-aos="fade-up" data-aos-duration="2000" className="text-gray-600 text-lg max-w-2xl mx-auto pt-4">
+              আপনার এলাকার উন্নয়নে যে কোনো পরামর্শ বা অভিযোগ জানাতে আমাদের প্রতিনিধিদের সাথে সরাসরি যোগাযোগ করুন।
+           </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {representatives.map((rep, index) => (
+            <div data-aos="fade-up" data-aos-duration="2000" key={index} className={`bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 border-t-4 ${rep.borderColor} p-8 text-center group`}>
+               {/* Avatar Placeholder */}
+               <div className="w-24 h-24 bg-gray-200 rounded-full mx-auto mb-6 flex items-center justify-center text-gray-400 group-hover:scale-105 transition-transform duration-300">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+               </div>
+               
+               <h3 className="text-2xl font-bold text-bd-green mb-1">{rep.name}</h3>
+               <p className="text-bd-red font-semibold mb-6">{rep.title}</p>
+               
+               <div className="space-y-3">
+                  <div className="flex items-center justify-center gap-2 text-gray-700 font-medium">
+                     <Phone size={18} className="text-bd-green" />
+                     <span>{rep.phone}</span>
+                  </div>
+                  
+                  <div className={`flex items-center justify-center gap-2 font-medium ${rep.btnColor}`}>
+                     {rep.icon}
+                     <span>{rep.actionText}</span>
+                  </div>
+               </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
