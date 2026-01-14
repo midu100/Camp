@@ -69,7 +69,7 @@ export default function Hero() {
             </div> */}
 
              <div className="relative w-80 h-80 md:w-[450px] md:h-[450px] rounded-full border-[12px] border-white/90 shadow-2xl overflow-hidden bg-gray-200 flex items-center justify-center shrink-0">
-               <div className="flex-1 hidden md:flex justify-center">
+               <div className="flex-1 md:flex justify-center">
                   {/* <span className="text-6xl mb-2">👋</span>
                   <p className="text-xl font-medium">Candidate Photo</p> */}
                   <img src={candidate} alt='img'  className="w-[380px] h-[380px] rounded-full border-4 border-white object-cover shadow-lg"/>

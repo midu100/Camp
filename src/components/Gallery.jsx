@@ -1,3 +1,10 @@
+import SingleGallery from "./common/SingleGallery";
+import g1 from '../assets/img/gallery1.jpg'
+import g2 from '../assets/img/gallery2.jpg'
+import g3 from '../assets/img/gallery3.jpg'
+import g4 from '../assets/img/gallery4.jpg'
+
+
 export default function Gallery() {
   // Using the local placeholder as sample data, duplicated for the grid
   const images = [
@@ -15,25 +22,15 @@ export default function Gallery() {
            <div className="w-24 h-1 bg-bd-red mx-auto rounded-full"></div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {images.map((img, index) => (
-            <div key={index} className="group relative overflow-hidden rounded-2xl shadow-lg border-2 border-transparent hover:border-bd-green transition-all duration-300">
-               {/* Image Container */}
-               <div className="aspect-square overflow-hidden">
-                 <img 
-                    src={img.src} 
-                    alt={img.alt} 
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
-                 />
-               </div>
-               
-               {/* Overlay (Optional) */}
-               <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-4">
-                  <p className="text-white font-medium">জনসমুদ্র</p>
-               </div>
-            </div>
-          ))}
-        </div>
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Image 1 */}
+          <SingleGallery src={g1}/>
+          <SingleGallery src={g2}/>
+          <SingleGallery src={g3}/>
+          <SingleGallery src={g4}/>
+          </div>
+
+        
       </div>
     </section>
   );
