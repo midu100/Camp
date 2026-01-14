@@ -15,7 +15,7 @@ export default function Hero() {
   return (
     <section
       id="home"
-      className="relative min-h-[90vh] flex items-center overflow-hidden"
+      className="relative min-h-[100vh] flex items-center overflow-hidden"
     >
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
