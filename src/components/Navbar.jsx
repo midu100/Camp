@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react'; // Using Lucide for the menu/close icons like before
 import { FaFlag } from 'react-icons/fa'; // Using FontAwesome for the flag logo as per new content
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -33,21 +34,21 @@ export default function Navbar() {
              <div className={`text-2xl ${scrolled ? 'text-bd-green' : 'text-white'} transition-colors`}>
                 <FaFlag />
              </div>
-             <a href="/" className={`font-bold text-2xl ${scrolled ? 'text-gray-800' : 'text-white'}`}>
+             <Link to="/" className={`font-bold text-2xl ${scrolled ? 'text-gray-800' : 'text-white'}`}>
               আবু <span className="text-bd-red">সুফিয়ান</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Menu - Original Layout, New Content */}
           <div className="hidden md:flex space-x-8">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className={`font-medium transition-colors duration-200 hover:text-bd-red ${scrolled ? 'text-gray-700' : 'text-white/90'}`}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -68,14 +69,14 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-100 absolute w-full shadow-xl">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navLinks.map((link) => (
-              <a
+              <Link
                 key={link.name}
-                href={link.href}
+                to={link.href}
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-bd-green hover:bg-green-50"
                 onClick={() => setIsOpen(false)}
               >
                 {link.name}
-              </a>
+              </Link>
             ))}
           </div>
         </div>

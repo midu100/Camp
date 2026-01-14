@@ -1,4 +1,5 @@
 import { Heart } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
   return (
@@ -19,19 +20,19 @@ export default function Footer() {
           <div>
              <h4 className="font-bold text-white uppercase tracking-wider mb-6 text-sm">মেনু</h4>
              <ul className="space-y-3 text-gray-400">
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#home" className="hover:text-bd-gold transition-colors block">হোম</a></li>
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#about" className="hover:text-bd-gold transition-colors block">পরিচিতি</a></li>
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#vision" className="hover:text-bd-gold transition-colors block">রূপকল্প ২০২৬</a></li>
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#contact" className="hover:text-bd-gold transition-colors block">যোগাযোগ</a></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/home" className="hover:text-bd-gold transition-colors block">হোম</Link></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/about" className="hover:text-bd-gold transition-colors block">পরিচিতি</Link></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/vision" className="hover:text-bd-gold transition-colors block">রূপকল্প ২০২৬</Link></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/contact" className="hover:text-bd-gold transition-colors block">যোগাযোগ</Link></li>
              </ul>
           </div>
 
           <div>
              <h4 className="font-bold text-white uppercase tracking-wider mb-6 text-sm">অন্যান্য</h4>
              <ul className="space-y-3 text-gray-400">
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#" className="hover:text-bd-gold transition-colors block">নির্বাচনী ইশতেহার</a></li>
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#" className="hover:text-bd-gold transition-colors block">মিডিয়া গ্যালারি</a></li>
-                <li data-aos="fade-up" data-aos-duration="3000"><a href="#" className="hover:text-bd-gold transition-colors block">স্বেচ্ছাসেবী নিবন্ধন</a></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/vision" className="hover:text-bd-gold transition-colors block">নির্বাচনী ইশতেহার</Link></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/gallery" className="hover:text-bd-gold transition-colors block">মিডিয়া গ্যালারি</Link></li>
+                <li data-aos="fade-up" data-aos-duration="3000"><Link to="/advice" className="hover:text-bd-gold transition-colors block">স্বেচ্ছাসেবী নিবন্ধন</Link></li>
              </ul>
           </div>
 

@@ -3,6 +3,7 @@ import candidate from "../assets/img/about.jpg";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export default function About() {
   const highlights = [
@@ -76,9 +77,9 @@ export default function About() {
             </ul>
 
             <div className="pt-6">
-              <button className="bg-bd-dark-green text-white px-8 py-3 rounded shadow hover:bg-bd-green transition-all font-semibold">
+              <Link to={'/'} className="bg-bd-dark-green text-white px-8 py-3 rounded shadow hover:bg-bd-green transition-all font-semibold">
                 বিস্তারিত জানুন
-              </button>
+              </Link>
             </div>
           </div>
         </div>
