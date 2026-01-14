@@ -1,8 +1,17 @@
 import { ArrowRight } from "lucide-react";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import candidate from "../assets/img/abu-sufian2.jpg";
+import { Link, useNavigate } from "react-router-dom";
+import Btn from "./common/Btn";
 
 export default function Hero() {
+  const navigate = useNavigate()
+
+  const handleBtn = ()=>{
+    navigate('/advice')
+  }
+
+
   return (
     <section
       id="home"
@@ -41,18 +50,19 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-4 items-center">
-              <button className="flex items-center justify-center gap-2 bg-bd-red text-white px-8 py-3 rounded shadow-lg hover:bg-red-700 transition-all font-bold text-lg">
+              {/* <button onClick={handleBtn} className="flex items-center justify-center gap-2 bg-bd-red text-white px-8 py-3 rounded shadow-lg hover:bg-red-700 transition-all font-bold text-lg">
                 যোগাযোগ করুন
-              </button>
+              </button> */}
+              <Btn onClick={handleBtn} Name={'যোগাযোগ করুন'}/>
               
               {/* Social Media Links */}
               <div className="flex gap-4">
-                  <a href="#" className="w-12 h-12 bg-white text-[#1877F2] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#1877F2] hover:text-white transition-all duration-300 transform group">
+                  <Link to="#" className="w-12 h-12 bg-white text-[#1877F2] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#1877F2] hover:text-white transition-all duration-300 transform group">
                      <FaFacebook size={24} />
-                  </a>
-                  <a href="#" className="w-12 h-12 bg-white text-[#FF0000] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#FF0000] hover:text-white transition-all duration-300 transform group">
+                  </Link>
+                  <Link to="#" className="w-12 h-12 bg-white text-[#FF0000] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#FF0000] hover:text-white transition-all duration-300 transform group">
                      <FaYoutube size={24} />
-                  </a>
+                  </Link>
               </div>
             </div>
           </div>
