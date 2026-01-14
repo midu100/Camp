@@ -1,6 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
-import candidate from "../assets/img/abu_sufian.jpg";
+import candidate from "../assets/img/abu-sufian2.jpg";
 
 export default function Hero() {
   return (
