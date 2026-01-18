@@ -3,6 +3,7 @@ import { FaFacebook, FaYoutube } from "react-icons/fa";
 import candidate from "../assets/img/abu-sufian2.jpg";
 import { Link, useNavigate } from "react-router-dom";
 import Btn from "./common/Btn";
+import Subject from "./common/Subject";
 
 export default function Hero() {
   const navigate = useNavigate()
@@ -35,9 +36,11 @@ export default function Hero() {
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Text Content (Left Side) */}
           <div className="text-center md:text-left space-y-6 animate-fade-in-up">
-            <h2 className="text-xl md:text-2xl font-semibold text-white/90">
+            {/* <h2 className="text-xl md:text-2xl font-semibold text-white/90">
               উন্নয়নের মার্কা,ধানের শীষ মার্কা।
-            </h2>
+            </h2> */}
+
+            <Subject Name={'উন্নয়নের মার্কা,ধানের শীষ মার্কা।'} />
 
             <h1 className="text-5xl md:text-7xl font-extrabold text-white leading-tight">
               দেশ গড়বো <br />
