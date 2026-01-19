@@ -4,10 +4,10 @@ import { FaWhatsapp, FaPhoneAlt, FaEnvelope, FaFacebookF } from "react-icons/fa"
 export default function Advice() {
   const representatives = [
     {
-      name: "জনাব আব্দুল মালেক",
-      title: "প্রধান সমন্বয়ক",
-      phone: "+8801788523456",
-      displayPhone: "০১৭৮৮-৫২৩৪৫৬",
+      name: "সায়েম",
+      title: "একান্ত সচিব",
+      phone: "+8801711270444",
+      displayPhone: "০১৭১১২৭০৪৪৪ (Tap for call)",
       actionType: "whatsapp",
       actionText: "WhatsApp এ মেসেজ দিন",
       actionLink: "https://wa.me/8801788523456",
@@ -16,10 +16,10 @@ export default function Advice() {
       borderColor: "border-bd-green"
     },
     {
-      name: "ব্যারিস্টার সুমন আহমেদ",
-      title: "আইন বিষয়ক উপদেষ্টা",
-      phone: "+8801899987654",
-      displayPhone: "০১৮৯৯-৯৮৭৬৫৪",
+      name: "সাজিদ হাসান রনি",
+      title: "---",
+      phone: "+8801********",
+      displayPhone: "০১*********",
       actionType: "email",
       actionText: "lawyer@example.com",
       actionLink: "mailto:lawyer@example.com",
@@ -28,10 +28,10 @@ export default function Advice() {
       borderColor: "border-bd-red"
     },
     {
-      name: "মোঃ ইব্রাহিম খলিল",
-      title: "যুব প্রতিনিধি",
-      phone: "+8801566567890",
-      displayPhone: "০১৫৬৬-৫৬৭৮৯০",
+      name: "---",
+      title: "---",
+      phone: "+8801*********",
+      displayPhone: "০১*********",
       actionType: "facebook",
       actionText: "ফেসবুকে নক দিন",
       actionLink: "https://facebook.com/",

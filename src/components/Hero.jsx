@@ -60,7 +60,7 @@ export default function Hero() {
               
               {/* Social Media Links */}
               <div className="flex gap-4">
-                  <Link to="#" className="w-12 h-12 bg-white text-[#1877F2] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#1877F2] hover:text-white transition-all duration-300 transform group">
+                  <Link to="https://www.facebook.com/abu.sufian.1481169" className="w-12 h-12 bg-white text-[#1877F2] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#1877F2] hover:text-white transition-all duration-300 transform group">
                      <FaFacebook size={24} />
                   </Link>
                   <Link to="#" className="w-12 h-12 bg-white text-[#FF0000] rounded-full flex items-center justify-center shadow-lg hover:scale-110 hover:bg-[#FF0000] hover:text-white transition-all duration-300 transform group">
